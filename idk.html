@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>changetext</title>
+    </head>
+    <body>
+        <style>
+            body {
+            font-family: 'Roboto', sans-serif;
+            color: rgb(100, 0, 255);
+            }
+            
+            body {
+                    background-color: rgb(110, 110, 110);
+                }
+            .button {
+                background-color: rgb(100, 0, 255);        
+
+            }    
+               </style>
+<button onclick="changeText()" >
+    click to to change text
+</button>
+<button onclick="reload()">reload site</button>
+<p id="textchange" >click the button to change the text on this line</p>
+<button onclick="nothing()">button that does nothing</button>
+
+<script>
+    var nothing = function() {
+
+        console.log("wow you found me!");
+        console.log("type in me(); in the console for stuff");
+    }
+var changeText = function()
+{
+   var text = document.getElementById("textchange");
+    text.innerHTML = "the text that was changed";
+    alert("text changed") 
+}
+var reload = function() {
+location.reload();
+}
+var me = function() {
+alert("?");
+window.open(
+            "hehe.html", "_blank");
+}
+</script>
+    </body>
+</html>

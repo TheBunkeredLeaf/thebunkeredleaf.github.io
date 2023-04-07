@@ -3,46 +3,41 @@
     <body>
 	<head>
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
-	<title>Login</title>
+	<title>verify</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	</head>
     <style>
     body {
     font-family: 'Roboto', sans-serif;
     color: rgb(100, 0, 255);
+    background-color: rgb(110, 110, 110);
     }
-	#txtbox {
-        background-color: rgb(100, 100, 100);
-        color: rgb(100, 0, 255);
-    }
-    #button {
-        background-color: rgb(100, 100, 100);
-        color: rgb(100, 0, 255);
-    }
-	body {
-            background-color: rgb(110, 110, 110);
-        }
 	   </style>
-       <input id="txtbox" type="text" placeholder="Secret" name="unname">
-      
-       <button id="button" onclick="NewTab()">
-        Powerful? Try this.
-    </button>
        
-         <script>
-       function NewTab() {
-            window.open(
-            "blank.html", "_blank");
+       <p>Input: 
+        <input id="passwordBox" type="password"></p>
+       <a href="game.html" onclick="return 
+       text();">Verify</a>
+       
+       <script >
+        function text() { 
+        var password = document.getElementById("passwordBox").value;
+        if(password == "haxxor") {
+        return true; 
+        } 
+          if(password !== "haxxor") {return false; }
+        
         }
-       </script>
-        <script> $(function(){
+        setInterval(myMethod, 1);
 
-            if($('#txtbox').val()!="sussy")
-           {
-            NewTab();
-           }
-     
-        });
-        </script>
+function myMethod()
+{
+   
+  password = document.getElementById("passwordBox").value;
+
+
+}
+
+       </script>
  </body>
  </html>
