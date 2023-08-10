@@ -20,7 +20,14 @@
        text();">Verify</a>
        
        <script >
-        function text() { 
+       function myMethod()
+{
+   
+  password = document.getElementById("passwordBox").value;
+
+
+}
+ function text() { 
         var password = document.getElementById("passwordBox").value;
         if(password == "haxxor") {
         return true; 
@@ -30,13 +37,6 @@
         }
         setInterval(myMethod, 1);
 
-function myMethod()
-{
-   
-  password = document.getElementById("passwordBox").value;
-
-
-}
 
        </script>
  </body>
