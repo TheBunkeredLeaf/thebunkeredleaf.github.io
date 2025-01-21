@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+    function decodeBase64(encodedStr) {
+        try {
+            return atob(encodedStr);
+        } catch (e) {
+            console.error('Invalid base64 string', e);
+            return null;
+        }
+    }
+
+    // Example usage:
+    const string64 = 'aG93IHlvdSBnZXQgc3BlY2lhbCBtYXRocyBwcmFjdGljZQoxLiBtYWtlIGEgcHJvdG9uIGFjY291bnQ6IGh0dHBzOi8vYWNjb3VudC5wcm90b24ubWUvbWFpbC9zaWdudXA/cGxhbj1mcmVlJnJlZj1tYWlsX3BsdXNfaW50cm8tbWFpbHByaWNpbmctMgoyLiBhZnRlciB5b3UgbWFrZSBpdCBnbyB0byB0aGUgNCBzcXVhcmVzIG5leHQgdG8gdGhlIGxvZ28gYW5kIGNsaWNrIG9uIHZwbgozLiB3aXJlZ3VhcmQgY2xpY2sgb24gYW5kIGdvIHRvIGFueSB1cy1mcmVlIHNlcnZlciBhbmQgZ2V0IHRoZSBjb25maWcKNC4gYWRkIGEgbmV3IHZwbiBjb25maWcgdG8gdXIgbGFidG9iIGFuZCBjaG9zZSB3aXJlZ3VhcmQKNS4gY2hvb3NlIHRoZSBpIGhhdmUgYSBrZXlwYWlyIHVuZGVyIGtleQo2LiB5b3UgYWRkIGFsbCBpbmZvIGFuZCBuYW1lIHNlcnZlcnMgeW91IGdvIG9udG8gYW5vdGhlciBkZXZpY2Ugb3IgdXNlIGEgdW5ibG9ja2VyIGFuZCBnbyB0byBteS5uZXh0ZG5zLmlvIGFkZCBhIG5ldyBjb25maWcgYW5kIGFkZCBzZWN1cmx5LmNvbSBhbmQgZ29ndWFyZGlhbi5jb20gCjcuIGFkZCB0aG9zZSBuYW1lIHNlcnZlcnMgZWcgOC44LjguOCw4LjguNC40LDAuMC4wLjAsMC4wLjAuMCAocmVwbGFjZSA4LjguOC44IGFuZCA4LjguNC40IHdpdGggdXIgZG5zIHNlcnZlcnMpCjguIGFkZCB0aGUgcHJva3N5IGF1dG9jb25maWcgd2l0aCBjb21wbGV0aW5nIHRoZSBzZXR1cCBhbmQgZ29pbmcgdG8gcHJva3N5IGFuZCBjaG9vc2luZyBhdXRvbWF0aWMgcHJva3N5IGNvbmZpZwo5LiB5aXBwZSBtYXRoIHByYWN0aWNlIGZyZWU=';
+    const encodedStr = string64; 
+    const decodedStr = decodeBase64(encodedStr);
+    if (decodedStr !== null) {
+        console.log('Decoded string:', decodedStr);
+    }
+    </script>
+<h1 id="decodedText"></h1>
+<script>
+if (decodedStr !== null) {
+    document.getElementById('decodedText').innerText = decodedStr;
+}
+</script>
+</body>
+
+
+</html>
